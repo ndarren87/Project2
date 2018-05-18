@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Eight</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Deck Name</th>
+        <th>Win %</th>
+        <th>Post SB Win %</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].deckType1 %></td>
+        <td><%= result[i].winRate %></td>
+        <td><%= result[i].postSBRate %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select deckType1, winRate, postSBRate <br />
+    &nbsp;&nbsp;&nbsp;from matchups <br />
+    &nbsp;&nbsp;&nbsp;order by winRate;
+</p>
+</body>
+</html>

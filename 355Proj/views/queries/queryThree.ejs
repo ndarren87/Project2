@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Three</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Deck Theme ID</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].name %></td>
+        <td><%= result[i].deckStyle_Id %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select name, deckStyle_Id <br />
+    &nbsp;&nbsp;&nbsp;from deckStyle <br />
+    &nbsp;&nbsp;&nbsp;where deckStyle_Id <br />
+    &nbsp;&nbsp;&nbsp;in (select deckStyle_Id from deckLists);
+</p>
+</body>
+</html>

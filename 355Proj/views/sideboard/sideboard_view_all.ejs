@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sideboard - View All</title>
+</head>
+<body>
+<hl>Sideboards</hl>
+<a href="/sideboard/add"> Add new Sideboard</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Used Against</th>
+        <th>Description</th>
+        <th>Creatures</th>
+        <th>Spells</th>
+        <th>Artifacts</th>
+        <th>Lands</th>
+        <th>Main Deck ID</th>
+        <th>Actions</th>
+    </tr>
+    <% for(var i= 0; i < sideboard.length; i++){ %>
+        <tr>
+            <td><%= sideboard[i].sideboard_Id %></td>
+            <td><%= sideboard[i].deckAgainst %></td>
+            <td><%= sideboard[i].description %></td>
+            <td><%= sideboard[i].creatures %></td>
+            <td><%= sideboard[i].spells %></td>
+            <td><%= sideboard[i].artifacts %></td>
+            <td><%= sideboard[i].lands %></td>
+            <td><%= sideboard[i].deck_Id %></td>
+            <td><a href="/sideboard/edit/?sideboard_Id=<%= sideboard[i].sideboard_Id %>">
+                    Edit
+                </a></td>
+            <td><a href="/sideboard/delete/?sideboard_Id=<%= sideboard[i].sideboard_Id %>">
+                    Delete
+                </a></td>
+        </tr>
+    <% } %>
+</table>
+</body>
+</html>

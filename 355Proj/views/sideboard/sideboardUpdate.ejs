@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sideboard - Update</title>
+</head>
+<body>
+<h1>Update Existing Sideboard</h1>
+<form action="/sideboard/update" method="get">
+    <input type="hidden"
+           id="sideboard_Id"
+           name="sideboard_Id"
+           value="<%= sideboard.sideboard_Id %>"
+    />
+    Deck Against:
+    <input
+            id="sideboard_Id"
+            name="deckAgainst"
+            type="text"
+            value="<%= sideboard.deckAgainst %>"
+    />
+    <br />
+    Decription:
+    <input
+            id="sideboard_Id"
+            name="description"
+            type="text"
+            value="<%= sideboard.description %>"
+    />
+    <br />
+    Creatures:
+    <input
+            id="sideboard_Id"
+            name="creatures"
+            type="text"
+            value="<%= sideboard.creatures %>"
+    />
+    <br />
+    Spells:
+    <input
+        id="sideboard_Id"
+        name="spells"
+        type="text"
+        value="<%= sideboard.spells %>"
+        />
+    <br />
+    Artifacts:
+    <input
+        id="sideboard_Id"
+        name="artifacts"
+        type="text"
+        value="<%= sideboard.artifacts%>"
+        />
+    <br />
+    Lands:
+    <input
+        id="sideboard_Id"
+        name="lands"
+        type="text"
+        value="<%= sideboard.lands %>"
+        />
+    <br />
+    Deck Id:
+    <input
+        id="sideboard_Id"
+        name="deck_Id"
+        type="number"
+        value="<%= sideboard.deck_Id %>"
+        />
+    <br />
+
+    <input type="submit" />
+
+</form>
+</body>

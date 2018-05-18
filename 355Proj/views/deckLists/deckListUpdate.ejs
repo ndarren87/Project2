@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeckList - Update</title>
+</head>
+<body>
+<hl>Update Existing Decklist</hl>
+<form action="/deckLists/update" method="get">
+    <input type="hidden"
+           id="deck_Id"
+           name="deck_Id"
+           value="<%= deckLists.deck_Id %>"
+    />
+    Deck Name:
+    <input
+        id="deck_Id"
+        name="name"
+        type="text"
+        value="<%= deckLists.name%>"
+        />
+    <br />
+    # of cards:
+    <input
+        id="deck_Id"
+        name="numCards"
+        type="number" min="60" max="100"
+        value="<%= deckLists.numCards %>"
+        />
+    <br />
+    Creatures:
+    <input
+        id="deck_Id"
+        name="creatures"
+        type="text"
+        value="<%= deckLists.creatures %>"
+        />
+    <br />
+    Spells:
+    <input
+        id="deck_Id"
+        name="spells"
+        type="text"
+        value="<%= deckLists.spells %>"
+        />
+    <br />
+    Artifacts:
+    <input
+        id="deck_Id"
+        name="artifacts"
+        type="text"
+        value="<%=deckLists.artifacts %>"
+        />
+    <br />
+    Lands:
+    <input
+        id="deck_Id"
+        name="lands"
+        type="text"
+        value="<%=deckLists.lands %>"
+        />
+    <br />
+    Deck Theme ID:
+    <input
+        id="deck_Id"
+        name="deckStyle_Id"
+        type="number" min="1" max="35"
+        value="<%=deckLists.deckStyle_Id %>"
+        />
+    <br />
+<input type="submit" />
+
+</form>
+</body>
+</html>

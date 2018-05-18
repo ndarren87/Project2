@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decklist - Add</title>
+</head>
+<body>
+<hl>Add A New Decklist</hl>
+    <form action="/deckLists/insert" method="get">
+        Deck Name: <input name="name" type="text" /><br />
+        # of Cards: <input name="numCards" type="number" min="60" max="100"/><br />
+        Creatures: <input name="creatures" type="text" /><br />
+        Spells: <input name="spells" type="text" /><br />
+        Artifacts: <input name="artifacts" type="text" /><br />
+        Lands: <input name="lands" type="text" /><br />
+        Deck Theme ID: <input name="deckStyle_Id" type="number" min="1" max="35" /><br />
+
+        <input type="submit" />
+    </form>
+</body>
+</html>

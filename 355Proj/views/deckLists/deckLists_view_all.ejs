@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decklists - View All</title>
+</head>
+<body>
+<hl>Decklists</hl>
+<a href="/deckLists/add"> Add new Decklist</a>
+<table border="1">
+    <tr>
+        <th>Deck ID</th>
+        <th>Name</th>
+        <th># of Cards</th>
+        <th>Creautres</th>
+        <th>Spells</th>
+        <th>Artifacts</th>
+        <th>Lands</th>
+        <th>Deck Theme ID</th>
+    </tr>
+    <% for(var i = 0; i < deckLists.length; i++) { %>
+        <tr>
+            <td><%= deckLists[i].deck_Id %></td>
+            <td><%= deckLists[i].name %></td>
+            <td><%= deckLists[i].numCards %></td>
+            <td><%= deckLists[i].creatures %></td>
+            <td><%= deckLists[i].spells %></td>
+            <td><%= deckLists[i].artifacts %></td>
+            <td><%= deckLists[i].lands %></td>
+            <td><%= deckLists[i].deckStyle_Id %></td>
+            <td><a href="/deckLists/edit/?deck_Id=<%= deckLists[i].deck_Id %>">
+                    Edit
+                </a></td>
+            <td><a href="/deckLists/delete/?deck_Id=<%= deckLists[i].deck_Id %>">
+                    Delete
+                </a></td>
+        </tr>
+    <% } %>
+</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deck Styles of Play - View All</title>
+</head>
+<body>
+<hl>Deck Styles of Play</hl>
+
+
+<table border="1">
+    <tr>
+        <th>Deck Type ID</th>
+        <th>Name</th>
+        <th>% of Archetype</th>
+        <th>Archetype ID</th>
+    </tr>
+    <% for(var i = 0; i < deckStyle.length; i++) { %>
+        <tr>
+            <td><%= deckStyle[i].deckStyle_Id %></td>
+            <td><%= deckStyle[i].name %></td>
+            <td><%= deckStyle[i].percentArchetype %>%</td>
+            <td><%= deckStyle[i].archetype_Id %></td>
+        </tr>
+    <% } %>
+</table>
+</body>
+</html>

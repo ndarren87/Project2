@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Six</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Archetype_Id</th>
+        <th>Number of Relative Decks</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].archetype_Id %></td>
+        <td><%= result[i].num %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select archetype_Id, count(name) as num <br />
+    &nbsp;&nbsp;&nbsp;from deckStyle <br />
+    &nbsp;&nbsp;&nbsp;group by archetype_Id;
+</p>
+</body>
+</html>

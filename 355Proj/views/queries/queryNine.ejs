@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Nine</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Deck Names</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].name %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select name <br />
+    &nbsp;&nbsp;&nbsp;from deckLists <br />
+    union <br />
+    select deckType1 <br />
+    &nbsp;&nbsp;&nbsp;from matchups;
+</p>
+</body>
+</html>

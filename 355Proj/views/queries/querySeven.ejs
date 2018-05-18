@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Seven</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Deck Name</th>
+        <th>Type ID</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].name %></td>
+        <td><%= result[i].deckTypes %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select ds.name, count(archetype_Id) <br />
+    &nbsp;&nbsp;&nbsp;as deckTypes <br />
+    &nbsp;&nbsp;&nbsp;from deckStyle ds <br />
+    &nbsp;&nbsp;&nbsp;join deckLists d on ds.deckStyle_Id=d.deckStyle_Id <br />
+    &nbsp;&nbsp;&nbsp;group by ds.deckStyle_Id <br />
+    &nbsp;&nbsp;&nbsp;having count(deckTypes)>0;
+</p>
+</body>
+</html>

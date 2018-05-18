@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Archetypes - View All</title>
+</head>
+<body>
+<hl>Archetypes</hl>
+
+<table border="1">
+    <tr>
+        <th>Archetype ID</th>
+        <th>Name</th>
+        <th>% of Meta</th>
+        <th>Description</th>
+    </tr>
+    <% for(var i = 0; i < archetypes.length; i++) { %>
+        <tr>
+            <td><%= archetypes[i].archetype_Id %></td>
+            <td><%= archetypes[i].name %></td>
+            <td><%= archetypes[i].percentMeta %>%</td>
+            <td><%= archetypes[i].description %></td>
+        </tr>
+    <% } %>
+</table>
+</body>
+</html>

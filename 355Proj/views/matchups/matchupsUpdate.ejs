@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matchups - Update</title>
+</head>
+<body>
+<hl>Update Existing Matchup</hl>
+<form action="/matchups/update" method="get">
+    <input type="hidden"
+           id="matchup_Id"
+           name="matchup_Id"
+           value="<%= matchups.matchup_Id %>"
+    />
+    Deck 1:
+    <input
+            id="matchup_Id"
+            name="deckType1"
+            type="text"
+            value="<%= matchups.deckType1%>"
+    />
+    <br />
+    Deck 2:
+    <input
+            id="matchup_Id"
+            name="deckType2"
+            type="text"
+            value="<%= matchups.deckType2 %>"
+    />
+    <br />
+    Favored:
+    <input
+            id="matchup_Id"
+            name="favoredDeck"
+            type="text"
+            value="<%= matchups.favoredDeck %>"
+    />
+    <br />
+    Init. Win Rate:
+    <input
+            id="matchup_Id"
+            name="winRate"
+            type="number"
+            value="<%= matchups.winRate %>"
+    />
+    <br />
+    Post SB WR:
+    <input
+            id="matchup_Id"
+            name="postSBRate"
+            type="number"
+            value="<%=matchups.postSBRate %>"
+    />
+    <br />
+    Deck 1 ID:
+    <input
+            id="matchup_Id"
+            name="deckStyle_Id"
+            type="number" min="1" max="35"
+            value="<%=matchups.deckStyle_Id %>"
+    />
+    <br />
+    <input type="submit" />
+
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Two</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Deck Category</th>
+        <th>% of its Associated Archetype</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].name %>%</td>
+        <td><%= result[i].percentArchetype %>%</td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select ds.name, ds.percentArchetype <br />
+    &nbsp;&nbsp;&nbsp;from deckStyle ds <br />
+    &nbsp;&nbsp;&nbsp;join deckLists d on ds.deckStyle_Id=d.deckStyle_Id;
+</p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matchups - View All</title>
+</head>
+    <body>
+        <hl>Matchups</hl>
+        <a href="/matchups/add">Add new Matchup</a>
+        <table border="1">
+            <tr>
+                <th>Matchup ID</th>
+                <th>Deck 1</th>
+                <th>Deck 2</th>
+                <th>Favored</th>
+                <th>Win%</th>
+                <th>Post SB Win%</th>
+                <th>Actions</th>
+            </tr>
+            <% for(var i = 0; i < matchups.length; i++) { %>
+                <tr>
+                    <td><%= matchups[i].matchup_Id %></td>
+                    <td><%= matchups[i].deckType1 %></td>
+                    <td><%= matchups[i].deckType2 %></td>
+                    <td><%= matchups[i].favoredDeck %></td>
+                    <td><%= matchups[i].winRate %>%</td>
+                    <td><%= matchups[i].postSBRate %>%</td>
+                    <td><a href="/matchups/edit/?matchup_Id=<%= matchups[i].matchup_Id %>">
+                            Edit
+                        </a></td>
+                    <td><a href="/matchups/delete/?matchup_Id=<%= matchups[i].matchup_Id %>">
+                            Delete
+                        </a></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>

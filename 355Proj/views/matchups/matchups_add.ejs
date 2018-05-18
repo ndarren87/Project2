@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathcup - Add</title>
+</head>
+<body>
+<hl>Add A New Matchup</hl>
+<form action="/matchups/insert" method="get">
+    Deck 1: <input name="deckType1" type="text" /><br />
+    Deck 2: <input name="deckType2" type="text" /><br />
+    Favored: <input name="favoredDeck" type="text" /><br />
+    Init. Win Rate: <input name="winRate" type="number" /><br />
+    Post SB Win Rate: <input name="postSBRate" type="number" /><br />
+    ID of Deck 1: <input name="deckStyle_Id" type="number" min="1" max="35" /><br />
+
+    <input type="submit" />
+</form>
+</body>
+</html>

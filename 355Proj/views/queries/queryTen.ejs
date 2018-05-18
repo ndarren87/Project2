@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Ten</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Deck Names</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].name %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select distinct name <br />
+    from deckLists;
+</p>
+</body>
+</html>

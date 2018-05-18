@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query One</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Deck ID</th>
+        <th>Deck Name</th>
+        <th>Theme ID</th>
+    </tr>
+    <% for (var i = 0; i < result.length; i++) { %>
+    <tr>
+        <td><%= result[i].deck_Id %></td>
+        <td><%= result[i].name %></td>
+        <td><%= result[i].deckStyle_Id %></td>
+    </tr>
+    <% } %>
+</table>
+<hl>Query:</hl>
+<p>
+    select deck_Id, name, deckStyle_Id <br />
+    &nbsp;&nbsp;&nbsp; from deckLists d <br />
+    &nbsp;&nbsp;&nbsp; where deckStyle_Id < ( <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; select AVG(deckstyle_Id) <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from deckStyle);
+</p>
+</body>
+</html>
